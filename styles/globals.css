@@ -1,0 +1,76 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+   */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for light and dark mode */
+@layer base {
+  :root {
+    --background-color-light: #ffffff;
+    --text-color-light: #000000;
+    --background-color-dark: #121212;
+    --text-color-dark: #ffffff;
+  }
+
+  /* Import Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+  /* Light mode styles */
+  [data-theme='light'] {
+    @apply bg-white text-black;
+    /* Ensure the background is white */
+    background-image: url('/images/light-image.jpg');
+    /* Add your light theme background image */
+    background-size: cover;
+    /* Cover the entire background */
+    background-repeat: no-repeat;
+    /* Prevent the background from repeating */
+  }
+
+  /* Dark mode styles */
+  [data-theme='dark'] {
+    @apply bg-gray-900 text-white;
+    /* Ensure the background is dark gray */
+    background-image: url('/images/dark-image.jpg');
+    /* Add your dark theme background image */
+    background-size: cover;
+    /* Cover the entire background */
+    background-repeat: no-repeat;
+    /* Prevent the background from repeating */
+  }
+
+  /* Custom styles for the calligraphy font */
+  .font-dancing-script {
+    font-family: 'Dancing Script', cursive;
+    /* Use the Dancing Script font */
+  }
+
+  /* Custom styles for Great Vibes font */
+  .font-great-vibes {
+    font-family: 'Great Vibes', cursive;
+    /* Use the Great Vibes font */
+  }
+
+  /* Custom styles for Roboto font */
+  .font-roboto {
+    font-family: 'Roboto', sans-serif;
+    /* Use the Roboto font */
+  }
+}
+
+/* Additional button styling */
+.theme-toggle-btn {
+  @apply px-4 py-2 m-2 cursor-pointer bg-blue-500 text-white rounded;
+}
+/* Example component style */
+.text-neon-blue {
+  color: #026288fd;
+}
+
+.text-neon-blue-dark {
+  color: #00abdf;
+}

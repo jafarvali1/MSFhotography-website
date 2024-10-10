@@ -1,0 +1,14 @@
+/* components/ReviewCard.module.css */
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move to half the width of the duplicated content */
+  }
+}
+
+.animateScroll {
+  animation: scroll 20s linear infinite; /* Adjust duration for speed control */
+}
