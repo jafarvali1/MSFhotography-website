@@ -95,26 +95,130 @@
 //   );
 // };
 
+// "use client";
+// import React, { useEffect, useRef, useState } from "react";
+// import { useMotionValueEvent, useScroll } from "framer-motion";
+// import { motion } from "framer-motion";
+// import { cn } from "@/lib/utils";
+
+// export const StickyScroll = ({
+//   content = [], // Default to an empty array to avoid undefined errors
+//   contentClassName
+// }) => {
+//   const [activeCard, setActiveCard] = React.useState(0);
+//   const ref = useRef(null);
+//   const { scrollYProgress } = useScroll({
+//     // Uncomment line 22 and comment line 23 if you DONT want the overflow container and want to have it change on the entire page scroll
+//     // target: ref
+//     container: ref,
+//     offset: ["start start", "end start"],
+//   });
+
+//   // Check if content is an array before accessing length
+//   const cardLength = Array.isArray(content) ? content.length : 0;
+
+//   useMotionValueEvent(scrollYProgress, "change", (latest) => {
+//     if (cardLength > 0) {
+//       const cardsBreakpoints = content.map((_, index) => index / cardLength);
+//       const closestBreakpointIndex = cardsBreakpoints.reduce((acc, breakpoint, index) => {
+//         const distance = Math.abs(latest - breakpoint);
+//         if (distance < Math.abs(latest - cardsBreakpoints[acc])) {
+//           return index;
+//         }
+//         return acc;
+//       }, 0);
+//       setActiveCard(closestBreakpointIndex);
+//     }
+//   });
+
+//   const backgroundColors = [
+//     "var(--slate-900)",
+//     // "var(--black)",
+//     "var(--neutral-900)",
+//   ];
+//   const linearGradients = [
+//     "linear-gradient(to bottom right, var(--cyan-500), var(--emerald-500))",
+//     "linear-gradient(to bottom right, var(--pink-500), var(--indigo-500))",
+//     "linear-gradient(to bottom right, var(--orange-500), var(--yellow-500))",
+//   ];
+
+//   const [backgroundGradient, setBackgroundGradient] = useState(linearGradients[0]);
+
+//   useEffect(() => {
+//     setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
+//   }, [activeCard]);
+
+//   return (
+//     <motion.div
+//       animate={{
+//         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
+//       }}
+//       className="h-[22rem] overflow-y-auto flex justify-center relative space-x-10 rounded-md p-10"
+//       ref={ref}
+//     >
+//       <div className="div relative flex items-start px-4">
+//         <div className="max-w-2xl ">
+//           {content.map((item, index) => (
+//             <div key={item.title + index} className="my-20">
+//               <motion.h2
+//                 initial={{
+//                   opacity: 0,
+//                 }}
+//                 animate={{
+//                   opacity: activeCard === index ? 1 : 0.3,
+//                 }}
+//                 className="text-2xl font-bold text-slate-100"
+//               >
+//                 {item.title}
+//               </motion.h2>
+//               {/* Changed <p> to <div> to avoid nesting issues */}
+//               <motion.div
+//                 initial={{
+//                   opacity: 0,
+//                 }}
+//                 animate={{
+//                   opacity: activeCard === index ? 1 : 0.3,
+//                 }}
+//                 className="text-kg text-slate-300 max-w-sm mt-10"
+//               >
+//                 {item.description}
+//               </motion.div>
+//             </div>
+//           ))}
+//           <div className="h-40" />
+//         </div>
+//       </div>
+//       <div
+//         style={{ background: backgroundGradient }}
+//         className={cn(
+//           "hidden lg:block h-60 w-80 rounded-md bg-white sticky top-10 overflow-hidden",
+//           contentClassName
+//         )}
+//       >
+//         {content[activeCard]?.content ?? null} {/* Safely access content */}
+//       </div>
+//     </motion.div>
+//   );
+// };
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
+import { useTheme } from '../../context/ThemeContext'; // Import the theme context
 import { cn } from "@/lib/utils";
 
 export const StickyScroll = ({
   content = [], // Default to an empty array to avoid undefined errors
-  contentClassName
+  contentClassName,
 }) => {
+  const { theme } = useTheme(); // Get the current theme
   const [activeCard, setActiveCard] = React.useState(0);
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
-    // Uncomment line 22 and comment line 23 if you DONT want the overflow container and want to have it change on the entire page scroll
-    // target: ref
     container: ref,
     offset: ["start start", "end start"],
   });
 
-  // Check if content is an array before accessing length
   const cardLength = Array.isArray(content) ? content.length : 0;
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
@@ -133,7 +237,6 @@ export const StickyScroll = ({
 
   const backgroundColors = [
     "var(--slate-900)",
-    "var(--black)",
     "var(--neutral-900)",
   ];
   const linearGradients = [
@@ -153,11 +256,11 @@ export const StickyScroll = ({
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="h-[22rem] overflow-y-auto flex justify-center relative space-x-10 rounded-md p-10"
+      className={`h-[22rem] overflow-y-auto flex justify-center relative space-x-10 rounded-md p-10 ${theme} bg-cover bg-center`} // Apply theme and styling
       ref={ref}
     >
-      <div className="div relative flex items-start px-4">
-        <div className="max-w-2xl ">
+      <div className="relative flex items-start px-4">
+        <div className="max-w-2xl">
           {content.map((item, index) => (
             <div key={item.title + index} className="my-20">
               <motion.h2
@@ -167,21 +270,21 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-2xl font-bold text-slate-100"
+                className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-black'}`} // Apply themed text color
               >
                 {item.title}
               </motion.h2>
-              <motion.p
+              <motion.div
                 initial={{
                   opacity: 0,
                 }}
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-kg text-slate-300 max-w-sm mt-10"
+                className={`text-lg max-w-sm mt-10 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-800'}`} // Apply themed description text color
               >
                 {item.description}
-              </motion.p>
+              </motion.div>
             </div>
           ))}
           <div className="h-40" />
@@ -190,7 +293,7 @@ export const StickyScroll = ({
       <div
         style={{ background: backgroundGradient }}
         className={cn(
-          "hidden  lg:block h-60 w-80 rounded-md bg-white sticky top-10 overflow-hidden",
+          `hidden lg:block h-60 w-80 rounded-md sticky top-10 overflow-hidden ${theme === 'dark' ? 'bg-gray-700' : 'bg-white'}`, // Apply themed background
           contentClassName
         )}
       >

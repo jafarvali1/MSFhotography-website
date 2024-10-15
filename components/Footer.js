@@ -18,7 +18,7 @@ const Footer = () => {
 
   return (
     <footer className={`flex justify-between items-center p-4 shadow-md ${theme === 'dark' ? 'bg-gray-800 text-gray-400' : 'bg-gray-200 text-gray-700'} text-sm`}> {/* Added shadow-md for upper shadow and kept existing theme-based colors */}
-      <div className="font-dancing-script text-lg">MS Photography</div> {/* Apply the calligraphy font */}
+      <div className="font-dancing-script text-lg">MS Fotography</div> {/* Apply the calligraphy font */}
       <div>Copyright &copy; {currentYear} Malik</div> {/* Display the current year */}
     </footer>
   );

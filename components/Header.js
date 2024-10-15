@@ -38,17 +38,11 @@ const Header = () => {
   const { theme, toggleTheme } = useTheme(); // Access theme and toggleTheme
 
   return (
-    <header className={`flex justify-between items-center p-4 shadow-lg ${theme === 'dark' ? 'bg-gray-800' : 'bg-gray-200'}`}>
+    <header className={`flex justify-between items-center p-4 ${theme === 'dark' ? 'bg-gray-800' : 'bg-transparent'}`}>
       <div className="flex items-center space-x-2"> {/* Wrapper for logo and icon */}
         <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
-        <span className={`font-dancing-script ${theme === 'dark' ? 'text-neon-blue-dark' : 'text-neon-blue'}`} >MS</span>&nbsp;Fotography
+          <span className={`font-dancing-script ${theme === 'dark' ? 'text-neon-blue-dark' : 'text-neon-blue'}`}>MS</span>&nbsp;Fotography
         </h1>
-        {/* <Image 
-          src="/images/CameraLens.png" // Use the actual path of your camera lens icon file
-          alt="Camera Lens Icon"
-          width={30} // Adjust the width as needed to match the font size
-          height={30} // Adjust the height as needed to match the font size
-        /> */}
       </div>
       <div className="lg:hidden" onClick={() => setMenuOpen(!menuOpen)}>
         <AiOutlineMenu size={30} className={theme === 'dark' ? 'text-white cursor-pointer' : 'text-black cursor-pointer'} />

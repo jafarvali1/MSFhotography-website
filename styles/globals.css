@@ -23,7 +23,7 @@
   [data-theme='light'] {
     @apply bg-white text-black;
     /* Ensure the background is white */
-    background-image: url('/images/light-image.jpg');
+    /* background-image: url('/images/light-image.jpg'); */
     /* Add your light theme background image */
     background-size: cover;
     /* Cover the entire background */
@@ -35,7 +35,7 @@
   [data-theme='dark'] {
     @apply bg-gray-900 text-white;
     /* Ensure the background is dark gray */
-    background-image: url('/images/dark-image.jpg');
+    /* background-image: url('/images/dark-image.jpg'); */
     /* Add your dark theme background image */
     background-size: cover;
     /* Cover the entire background */
