@@ -53,7 +53,9 @@
 
 'use client';
 import { TypeAnimation } from 'react-type-animation';
-import { useTheme } from '../context/ThemeContext'; // Import useTheme from your ThemeContext
+import { useTheme } from '../context/ThemeContext';
+import Image from 'next/image';
+ // Import useTheme from your ThemeContext
 // import Header from '../components/Header'; // Import Header component
 
 export default function Home() {

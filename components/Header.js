@@ -40,9 +40,11 @@ const Header = () => {
   return (
     <header className={`flex justify-between items-center p-4 ${theme === 'dark' ? 'bg-gray-800' : 'bg-transparent'}`}>
       <div className="flex items-center space-x-2"> {/* Wrapper for logo and icon */}
-        <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
-          <span className={`font-dancing-script ${theme === 'dark' ? 'text-neon-blue-dark' : 'text-neon-blue'}`}>MS</span>&nbsp;Fotography
-        </h1>
+        <Link href="/"> {/* Wrap the h1 element with Link to navigate to home */}
+          <h1 className={`text-2xl font-bold ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
+            <span className={`font-dancing-script ${theme === 'dark' ? 'text-neon-blue-dark' : 'text-neon-blue'}`}>MS</span>&nbsp;Fotography
+          </h1>
+        </Link>
       </div>
       <div className="lg:hidden" onClick={() => setMenuOpen(!menuOpen)}>
         <AiOutlineMenu size={30} className={theme === 'dark' ? 'text-white cursor-pointer' : 'text-black cursor-pointer'} />

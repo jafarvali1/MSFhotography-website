@@ -52,6 +52,7 @@
 
 // 
 import { FocusCards } from "@/components/ui/focus-cards";
+import Image from 'next/image';
 
 function Gallery() {
   const cards = [
