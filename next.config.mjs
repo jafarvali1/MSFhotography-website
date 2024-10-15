@@ -2,22 +2,10 @@
 // const nextConfig = {};
 
 // export default nextConfig;
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-      remotePatterns: [
-          {
-              protocol: 'https',
-              hostname: 'images.unsplash.com',
-              pathname: '/**',
-          },
-          {
-              protocol: 'https',
-              hostname: 'assets.aceternity.com',
-              pathname: '/**',
-          },
-      ],
+    domains: ['jafarvali1.github.io'], // Add your domain here
   },
 };
 
