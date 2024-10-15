@@ -132,9 +132,9 @@ const content = [
     ),
     description: (
       <div className="text-black dark:text-white">
-        "Work together in real time with your team, clients, and stakeholders. 
+        &ldquo;Work together in real time with your team, clients, and stakeholders. 
         Collaborate on documents, share ideas, and make decisions quickly. With our platform, 
-        you can streamline your workflow and increase productivity."
+        you can streamline your workflow and increase productivity.&rdquo;
       </div>
     ),
   },
@@ -155,9 +155,9 @@ const content = [
     ),
     description: (
       <div className="text-black dark:text-white">
-        "See changes as they happen. With our platform, you can track every modification in real time. 
+        &ldquo;See changes as they happen. With our platform, you can track every modification in real time. 
         No more confusion about the latest version of your project. Say goodbye to the chaos of version 
-        control and embrace the simplicity of real-time updates."
+        control and embrace the simplicity of real-time updates.&rdquo;
       </div>
     ),
   },
@@ -178,10 +178,10 @@ const content = [
     ),
     description: (
       <div className="text-black dark:text-white">
-        "Experience real-time updates and never stress about version control again. 
-        Our platform ensures that you're always working on the most recent version of 
+        &ldquo;Experience real-time updates and never stress about version control again. 
+        Our platform ensures that you&apos;re always working on the most recent version of 
         your project, eliminating the need for constant manual updates. Stay in the loop, 
-        keep your team aligned, and maintain the flow of your work without any interruptions."
+        keep your team aligned, and maintain the flow of your work without any interruptions.&rdquo;
       </div>
     ),
   },
@@ -194,3 +194,5 @@ export function StickyScrollRevealDemo() {
     </div>
   );
 }
+
+
