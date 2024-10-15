@@ -60,9 +60,9 @@ export default function About() {
         >
           <h1 className={`text-3xl font-bold mb-4 ${theme === 'dark' ? 'text-white' : 'text-black'}`}>About Me</h1>
           <p className={`max-w-xl mb-4 ${theme === 'dark' ? 'text-gray-300' : 'text-black'} font-greatVibes`}>
-            I'm a passionate photographer based in Hyderabad, specializing in wedding, model, and candid photography. My focus is on capturing authentic and timeless images that tell a story.
-            Whether it’s a special wedding moment or a stunning model shoot, I aim to deliver photos that resonate.
-            Let’s connect and create something memorable together!
+            I&apos;m a passionate photographer based in Hyderabad, specializing in wedding, model, and candid photography. My focus is on capturing authentic and timeless images that tell a story.
+            Whether it&apos;s a special wedding moment or a stunning model shoot, I aim to deliver photos that resonate.
+            Let&apos;s connect and create something memorable together!
           </p>
           <Link href="/contact">
             <button className={`py-2 px-4 rounded focus:outline-none focus:shadow-outline font-bold ${theme === 'dark' ? 'bg-white text-black hover:bg-sky-800' : 'bg-gray-800 text-white hover:bg-sky-800'}`}>
