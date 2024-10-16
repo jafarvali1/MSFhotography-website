@@ -93,31 +93,43 @@
 //     </html>
 //   );
 // }
+// app/layout.js
+// app/layout.js
+
 'use client';
 import '../styles/globals.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { ThemeProvider, useTheme } from '../context/ThemeContext'; // Import useTheme
+import { ThemeProvider, useTheme } from '../context/ThemeContext';
 
+const ThemeWrapper = ({ children }) => {
+  const { theme } = useTheme(); // Get the current theme from context
+
+  return (
+    <body data-theme={theme}>
+      <Header />
+      <div className="frame-effect">
+        <main className="min-h-screen">{children}</main>
+      </div>
+      <Footer />
+    </body>
+  );
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link 
-          href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" 
-          rel="stylesheet" 
+        <link
+          href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+          rel="stylesheet"
         />
       </head>
-      <body>
-        <ThemeProvider>
-          <Header />
-          {/* <BackgroundWrapper> Wrap main content in BackgroundWrapper */}
-            <main className="min-h-screen">{children}</main>
-          {/* </BackgroundWrapper> */}
-          <Footer />
-        </ThemeProvider>
-      </body>
+      <ThemeProvider>
+        <ThemeWrapper>{children}</ThemeWrapper>
+      </ThemeProvider>
     </html>
   );
 }
+
+

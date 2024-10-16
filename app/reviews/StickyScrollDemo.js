@@ -155,9 +155,7 @@ const content = [
     ),
     description: (
       <div className="text-black dark:text-white">
-        &ldquo;See changes as they happen. With our platform, you can track every modification in real time. 
-        No more confusion about the latest version of your project. Say goodbye to the chaos of version 
-        control and embrace the simplicity of real-time updates.&rdquo;
+        &ldquo;Working with Malik was a delightful experience. Very sincere and professional. He is open to creative ideas and collaborations. Good working experience overall.&rdquo;
       </div>
     ),
   },
@@ -178,10 +176,7 @@ const content = [
     ),
     description: (
       <div className="text-black dark:text-white">
-        &ldquo;Experience real-time updates and never stress about version control again. 
-        Our platform ensures that you&apos;re always working on the most recent version of 
-        your project, eliminating the need for constant manual updates. Stay in the loop, 
-        keep your team aligned, and maintain the flow of your work without any interruptions.&rdquo;
+        &ldquo;It was soo easy working with Malik.He knows his craft and is really good with the lights, and the photos turned out amazing.He has endless patience, and I never felt awkward asking for more shots or changes. Even though I&apos;m a shy person, he made me feel comfortable in front of the camera, which made the whole experience super relaxed and fun. I&apos;m sure he is going to be a big name soon, so get your shoot done before his prices go u.&rdquo;
       </div>
     ),
   },

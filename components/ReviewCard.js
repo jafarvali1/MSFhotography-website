@@ -65,11 +65,9 @@ import React from "react";
 import styles from './ReviewCard.module.css'; // Adjust the path to your CSS module
 
 const reviews = [
-  { image: '/path-to-reviewer-image1.jpg', text: 'Great photographer! Highly recommend.' },
-  { image: '/path-to-reviewer-image2.jpg', text: 'Amazing experience! Loved the photos.' },
-  { image: '/path-to-reviewer-image3.jpg', text: 'Absolutely stunning work!' },
-  { image: '/path-to-reviewer-image4.jpg', text: 'Professional and talented!' },
-  { image: '/path-to-reviewer-image5.jpg', text: 'Will definitely hire again!' },
+  { image: '/images/Sarya-Jewellery1.jpg', text: 'Great photographer! Highly recommend.' },
+  { image: '/images/Ananthika.jpg', text: 'Amazing experience! Loved the photos.' },
+  { image: '/images/Lekhya.jpg', text: 'Absolutely stunning work!' },
 ];
 
 const ReviewCard = () => {

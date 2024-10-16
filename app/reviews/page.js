@@ -18,6 +18,7 @@
 import React from "react";
 import { useTheme } from '../../context/ThemeContext'; // Import the theme context
 import { StickyScrollRevealDemo } from './StickyScrollDemo';
+import { InfiniteMovingCardsDemo } from "./InfiniteMovingCards";
 import ReviewCard from '../../components/ReviewCard';
 
 export default function Reviews() {
@@ -37,13 +38,14 @@ export default function Reviews() {
         <h1 className={`text-3xl font-bold font-serif text-center ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
           Reviews
         </h1>
-
+{/* 
         <h5 className={`text-xl font-italic text-center mt-4 ${theme === 'dark' ? 'text-white' : 'text-black'}`}>
           Scroll Down for More Reviews
-        </h5>
+        </h5> */}
 
         {/* <ReviewCard /> */}
-        <StickyScrollRevealDemo />
+        {/* <StickyScrollRevealDemo /> */}
+        <InfiniteMovingCardsDemo/>
       </div>
     </BackgroundWrapper>
   );

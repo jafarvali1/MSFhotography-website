@@ -9,6 +9,8 @@
 //   };
   
 // Footer.js
+// components/Footer.js
+
 import { useTheme } from '../context/ThemeContext'; // Import the theme context
 
 const Footer = () => {
@@ -17,9 +19,9 @@ const Footer = () => {
   const currentYear = new Date().getFullYear(); // Get the current year
 
   return (
-    <footer className={`flex justify-between items-center p-4 shadow-md ${theme === 'dark' ? 'bg-gray-800 text-gray-400' : 'bg-gray-200 text-gray-700'} text-sm`}> {/* Added shadow-md for upper shadow and kept existing theme-based colors */}
-      <div className="font-dancing-script text-lg">MS Fotography</div> {/* Apply the calligraphy font */}
-      <div>Copyright &copy; {currentYear} Malik</div> {/* Display the current year */}
+    <footer className={`flex justify-between items-center p-4 shadow-md ${theme === 'dark' ? 'bg-gray-800 text-gray-400' : 'bg-gray-200 text-gray-700'} text-sm`}>
+      <div className="font-dancing-script text-lg font-semibold">MS Fotography</div>
+      <div>Copyright &copy; {currentYear} Malik</div>
     </footer>
   );
 };
