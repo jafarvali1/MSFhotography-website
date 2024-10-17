@@ -364,7 +364,7 @@ export default function Contact() {
         <p className="mb-2">Malik +91 82977 60804</p>
         <p className="mb-2">Get in touch!</p>
         <div className="flex space-x-4 mb-4">
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-neon-blue">
+          <a href="https://www.instagram.com/ms_fotography_official/profilecard/?igsh=MXdoaGwyYXd1YW4xMA==" target="_blank" rel="noopener noreferrer" className="text-neon-blue">
             <FaInstagram size={30} />
           </a>
         </div>
