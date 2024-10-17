@@ -99,13 +99,13 @@ function Gallery() {
       title: "Jewellery-Shoot",
       images: [
         "/images/Jewellery-Sarya.png",
-        "/images/Sarya-Jewellery1.jpg",
-        "/images/Sarya-Jewellery2.jpg",
-        "/images/Sarya-Jewellery3.jpg", // Fourth image
-        "/images/Sarya-Jewellery4.jpg", // Fifth image
-        "/images/Sarya-Jewellery5.jpg", // Sixth image
-        "/images/Sarya-Jewellery6.jpg", // Seventh image
-        "/images/Sarya-Jewellery7.jpg", // Eighth image
+        "/images/Sarya-Jewellery1.JPG",
+        "/images/Sarya-Jewellery2.JPG",
+        "/images/Sarya-Jewellery3.JPG", // Fourth image
+        "/images/Sarya-Jewellery4.JPG", // Fifth image
+        "/images/Sarya-Jewellery5.JPG", // Sixth image
+        "/images/Sarya-Jewellery6.JPG", // Seventh image
+        "/images/Sarya-Jewellery7.JPG", // Eighth image
       ],
     },
     {
