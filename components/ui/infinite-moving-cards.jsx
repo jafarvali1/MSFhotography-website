@@ -1,3 +1,5 @@
+// 
+
 "use client";
 
 import { cn } from "@/lib/utils";
@@ -88,6 +90,12 @@ export const InfiniteMovingCards = ({
                 {item.quote}
               </span>
               <div className="relative z-20 mt-6 flex flex-row items-center">
+                {/* Added profile image */}
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="w-10 h-10 rounded-full mr-2"
+                />
                 <span className="flex flex-col gap-1">
                   <span className="text-sm leading-[1.6] font-normal">
                     {item.name}

@@ -12,16 +12,33 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
+  /* Light Theme Background */
   [data-theme='light'] {
     @apply bg-white text-black;
-    background-size: cover;
+    background-image: url('/images/LightDslr.jpg'); /* Ensure the path is correct */
+    background-size: cover; /* Makes the background cover the whole area */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the image fixed */
     background-repeat: no-repeat;
   }
 
+  /* Dark Theme Background */
   [data-theme='dark'] {
     @apply bg-gray-900 text-white;
-    background-size: cover;
+    background-image: url('/images/DarkDslr.jpg'); /* Ensure the path is correct */
+    background-size: cover; /* Makes the background cover the whole area */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the image fixed */
     background-repeat: no-repeat;
+  }
+
+  /* Mobile Optimization */
+  @media (max-width: 767px) {
+    [data-theme='light'], [data-theme='dark'] {
+      background-attachment: scroll; /* Adjust for better mobile support */
+      background-size: cover; /* Ensures the image covers the entire background */
+      background-position: top; /* Position image from the top */
+    }
   }
 
   .font-dancing-script {
