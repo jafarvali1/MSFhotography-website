@@ -96,6 +96,43 @@
 // app/layout.js
 // app/layout.js
 
+// 'use client';
+// import '../styles/globals.css';
+// import Header from '../components/Header';
+// import Footer from '../components/Footer';
+// import { ThemeProvider, useTheme } from '../context/ThemeContext';
+
+// const ThemeWrapper = ({ children }) => {
+//   const { theme } = useTheme(); // Get the current theme from context
+
+//   return (
+//     <body data-theme={theme}>
+//       <Header />
+//       <div className="frame-effect">
+//         <main className="min-h-screen">{children}</main>
+//       </div>
+//       <Footer />
+//     </body>
+//   );
+// };
+
+// export default function RootLayout({ children }) {
+//   return (
+//     <html lang="en">
+//       <head>
+//         <link
+//           href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+//           rel="stylesheet"
+//         />
+//         <link rel="icon" href="/app/public/favicon.ico" /> {/* Add this line for favicon */}
+//       </head>
+//       <ThemeProvider>
+//         <ThemeWrapper>{children}</ThemeWrapper>
+//       </ThemeProvider>
+//     </html>
+//   );
+// }
+
 'use client';
 import '../styles/globals.css';
 import Header from '../components/Header';
@@ -108,7 +145,7 @@ const ThemeWrapper = ({ children }) => {
   return (
     <body data-theme={theme}>
       <Header />
-      <div className="frame-effect">
+      <div>
         <main className="min-h-screen">{children}</main>
       </div>
       <Footer />
@@ -124,6 +161,7 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
           rel="stylesheet"
         />
+        <link rel="icon" href="/favicon.ico" /> {/* Updated favicon path */}
       </head>
       <ThemeProvider>
         <ThemeWrapper>{children}</ThemeWrapper>
@@ -131,5 +169,4 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
 
